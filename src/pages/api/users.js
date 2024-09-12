@@ -27,6 +27,8 @@ export default async function handler(req, res) {
         return res.status(400).json({ message: "Query parameter is required" });
       }
 
+      console.log("Query:", query); // Log query
+
       const results = await collection
         .find({
           $or: [
@@ -36,13 +38,15 @@ export default async function handler(req, res) {
         })
         .toArray();
 
+      console.log("Results:", results); // Log results
+
       res.status(200).json(results);
     } else {
       res.setHeader("Allow", ["GET"]);
       res.status(405).end(`Method ${req.method} Not Allowed`);
     }
   } catch (error) {
-    console.error('Error in API route:', error);
-    res.status(500).json({ error: 'Internal Server Error' });
+    console.error("Error:", error); // Log errors
+    res.status(500).json({ message: "Internal Server Error" });
   }
 }
