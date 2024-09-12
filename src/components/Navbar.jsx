@@ -13,7 +13,7 @@ export default function Navbar() {
     <nav className="flex justify-between items-center px-8 bg-white shadow-md h-20 w-full">
       <div className="flex items-center pl-10">
         <Image
-          src="logo2.svg"
+          src="/logo2.svg"
           alt="Girman Technologies Logo"
           width={150} 
           height={50} 

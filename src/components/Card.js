@@ -7,7 +7,7 @@ export default function Card({ user }) {
 
   return (
     <div className={styles.card}>
-      <img src={"http://www.ikozmik.com/Content/Images/uploaded/its-free-featured.jpg"} alt="User" className={styles.image} />
+      <img src="/its-free-featured.jpg" alt="User" className={styles.image} />
       <h2 className={styles.userName}>{user.first_name} {user.last_name}</h2>
       <p className={styles.userAddress}><span>📍</span> {user.city}</p>
 
@@ -30,7 +30,7 @@ export default function Card({ user }) {
       <DialogTitle>{user.first_name} {user.last_name}</DialogTitle>
       <DialogDescription>
         <br />
-        <img src={"http://www.ikozmik.com/Content/Images/uploaded/its-free-featured.jpg"} alt={`${user.firstName} ${user.lastName}`} className={styles.profileImage} />
+        <img src="/its-free-featured.jpg" alt={`${user.first_name} ${user.last_name}`} className={styles.profileImage} />
         <br />
         Location: {user.city}
         <br />

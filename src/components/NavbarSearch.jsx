@@ -14,7 +14,7 @@ export default function NavbarSearch() {
       </div> */}
       <div className="flex items-center pl-10">
         <Image
-          src='logo2.svg' 
+          src='/logo2.svg' 
           alt="Girman Technologies Logo" 
           width={150} // Adjust width as needed
           height={50} // Adjust height as needed
