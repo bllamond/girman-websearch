@@ -1,24 +1,15 @@
 import { MongoClient } from 'mongodb';
 
-// Use environment variables for sensitive information
-const uri = process.env.MONGODB_URI;
-
-if (!uri) {
-  throw new Error('Please add your MongoDB URI to .env.local');
-}
-
-// Configure client options with timeouts
-const options = {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  connectTimeoutMS: 30000, // 30 seconds
-  serverSelectionTimeoutMS: 30000 // 30 seconds
-};
-
+const uri = process.env.MONGODB_URI; 
 let client;
 let clientPromise;
 
-client = new MongoClient(uri, options);
+if (!process.env.MONGODB_URI) {
+  throw new Error('Please add your MongoDB URI to .env.local');
+}
+
+// Initialize MongoClient without deprecated options
+client = new MongoClient(uri);
 clientPromise = client.connect();
 
 export default clientPromise;
