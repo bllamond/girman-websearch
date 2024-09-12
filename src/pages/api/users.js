@@ -1,5 +1,5 @@
 // pages/api/users.js
-import userData from '../../../public/data/users.json'; // Import JSON data
+import userData from '../../../data/users.json'; // Import JSON data
 
 
 export default function handler(req, res) {
