@@ -1,0 +1,87 @@
+.card {
+    border: 1px solid #e2e8f0; /* Gray border */
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 20px; /* Space between cards */
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Card shadow */
+    max-width: 100%; /* Allow the card to expand to its container's width */
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    /* Add responsive width management if needed */
+  }
+
+.image {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%; /* Circular image */
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.userName {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.icon {
+  fill: black;
+}
+
+.detailsContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.userInfo {
+  text-align: left;
+}
+
+.line {
+  border: none;
+  height: 1px;
+  margin-top: 25px;
+  background-color: rgb(212, 208, 208); /* Light gray color */
+}
+
+.userPhone {
+  color: black; /* Gray text color */
+}
+
+.userAddress {
+  color: rgb(37, 37, 37);
+  font-weight: bold;
+}
+
+.info {
+  color: grey;
+  padding-left: 3px;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 12px; /* Increase space above button */
+}
+
+.fetchButton {
+  background-color: black; /* Blue background */
+  color: #fff; /* White text */
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.closeButton {
+  background-color: #f56565; /* Red background */
+  color: #fff; /* White text */
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin-top: 12px;
+  cursor: pointer;
+}
