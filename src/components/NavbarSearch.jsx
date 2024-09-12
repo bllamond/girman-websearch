@@ -16,8 +16,8 @@ export default function NavbarSearch() {
         <Image
           src='/Logo2.svg' 
           alt="Girman Technologies Logo" 
-          width={150} // Adjust width as needed
-          height={50} // Adjust height as needed
+          width={150} 
+          height={50} 
           className="object-contain" 
           onClick={handleLogoClick} 
         />

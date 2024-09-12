@@ -1,24 +1,21 @@
 .container {
   display: flex;
 
-  justify-content: center; /* Center the grid horizontally */
+  justify-content: center; 
   padding: 0 40px;
-  margin-top: 35px; /* Padding on the left and right */
+  margin-top: 35px; 
 }
 
 /* Grid container */
 .gridContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible grid */
-  gap: 18px; /* Space between grid items */
-  max-width: 1200px; /* Maximum width for the grid */
-  width: 100%; /* Full width of the parent container */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 18px; 
+  max-width: 1200px; 
+  width: 100%; 
   padding: 20px 50px; 
-  /* Padding on top and bottom, no padding on sides */
 }
 
-
-/* Add margin to grid items to ensure equal space around them */
 .gridItem {
   margin: 0 auto;
 } 

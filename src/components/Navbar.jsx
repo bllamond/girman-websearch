@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
- // Update the path to your logo
+
 
 export default function Navbar() {
   const router = useRouter();
@@ -17,8 +17,8 @@ export default function Navbar() {
           alt="Girman Technologies Logo"
           width={150} 
           height={50} 
-          className="object-contain cursor-pointer" // Add cursor-pointer for visual feedback
-          onClick={handleLogoClick} // Add onClick handler
+          className="object-contain cursor-pointer" 
+          onClick={handleLogoClick} 
         />
         {/* <div className="ml-4 font-bold">
           <span className="text-4xl text-gray-900">Girman</span> <br />{" "}

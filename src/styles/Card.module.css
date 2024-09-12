@@ -1,21 +1,20 @@
 .card {
-    border: 1px solid #e2e8f0; /* Gray border */
-    padding: 16px;
-    border-radius: 12px;
-    margin-bottom: 20px; /* Space between cards */
-    background-color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Card shadow */
-    max-width: 100%; /* Allow the card to expand to its container's width */
-    display: flex;
-    flex-direction: column;
-    max-width: 350px;
-    /* Add responsive width management if needed */
-  }
+  border: 1px solid #e2e8f0;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+}
 
 .image {
   width: 64px;
   height: 64px;
-  border-radius: 50%; /* Circular image */
+  border-radius: 50%;
   object-fit: cover;
   margin-bottom: 12px;
 }
@@ -45,11 +44,11 @@
   border: none;
   height: 1px;
   margin-top: 25px;
-  background-color: rgb(212, 208, 208); /* Light gray color */
+  background-color: rgb(212, 208, 208);
 }
 
 .userPhone {
-  color: black; /* Gray text color */
+  color: black;
 }
 
 .userAddress {
@@ -66,20 +65,20 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin-top: 12px; /* Increase space above button */
+  margin-top: 12px;
 }
 
 .fetchButton {
-  background-color: black; /* Blue background */
-  color: #fff; /* White text */
+  background-color: black;
+  color: #fff;
   padding: 8px 16px;
   border-radius: 8px;
   cursor: pointer;
 }
 
 .closeButton {
-  background-color: #f56565; /* Red background */
-  color: #fff; /* White text */
+  background-color: #f56565;
+  color: #fff;
   padding: 8px 16px;
   border-radius: 8px;
   margin-top: 12px;

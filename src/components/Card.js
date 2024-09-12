@@ -1,4 +1,4 @@
-import styles from '@/styles/Card.module.css'; // Assuming your module CSS is named Card.module.css
+import styles from '@/styles/Card.module.css';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { useState } from 'react';
 
