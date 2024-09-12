@@ -13,32 +13,36 @@
 
 //   res.status(200).json(results);
 // }
-
 import clientPromise from "@/lib/mongodb";
 
 export default async function handler(req, res) {
-  const client = await clientPromise;
-  const db = client.db();
-  const collection = db.collection("users");
+  try {
+    const client = await clientPromise;
+    const db = client.db();
+    const collection = db.collection("users");
 
-  if (req.method === "GET") {
-    const { query } = req.query;
-    if (!query) {
-      return res.status(400).json({ message: "Query parameter is required" });
+    if (req.method === "GET") {
+      const { query } = req.query;
+      if (!query) {
+        return res.status(400).json({ message: "Query parameter is required" });
+      }
+
+      const results = await collection
+        .find({
+          $or: [
+            { first_name: { $regex: query, $options: "i" } },
+            { last_name: { $regex: query, $options: "i" } },
+          ],
+        })
+        .toArray();
+
+      res.status(200).json(results);
+    } else {
+      res.setHeader("Allow", ["GET"]);
+      res.status(405).end(`Method ${req.method} Not Allowed`);
     }
-
-    const results = await collection
-      .find({
-        $or: [
-          { first_name: { $regex: query, $options: "i" } },
-          { last_name: { $regex: query, $options: "i" } },
-        ],
-      })
-      .toArray();
-
-    res.status(200).json(results);
-  } else {
-    res.setHeader("Allow", ["GET"]);
-    res.status(405).end(`Method ${req.method} Not Allowed`);
+  } catch (error) {
+    console.error('Error in API route:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
   }
 }
