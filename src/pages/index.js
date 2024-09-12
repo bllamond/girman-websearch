@@ -13,11 +13,11 @@ export default function Home() {
       <Image
           src="/logo3.jpeg"
           alt="Girman Technologies Logo"
-          width={130} 
+          width={110} 
           height={50} 
           className="object-contain cursor-pointer rounded-lg"
         />
-      <h1 className="text-9xl font-bold mb-8 text-gray-900 ">Girman</h1>
+      <h1 className="text-8xl font-bold mb-8 text-gray-900 ">Girman</h1>
       </div>
       <SearchBox />
     </div>
